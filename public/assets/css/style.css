@@ -1,0 +1,57 @@
+body{
+    background-color:#F7C747 !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.main-container{
+    margin-top: 20px;
+}
+
+.container{
+    margin-top: 40px;
+}
+
+#selection{
+    margin-left: 60px;
+}
+
+#devoured{
+    margin-left: 20px;
+}
+
+.body{
+    background-color: #F7C747;
+}
+
+#textArea{
+    margin-bottom: 10px;
+}
+
+.burgerType{
+    margin-bottom: 5px;
+}
+
+.btnDevour{
+    border-color: #B02313;
+    background-color:#B2FC4D;
+}
+
+#btnCreate{
+    border-color: #B02313;
+    background-color:#B2FC4D;
+}
+
+#textArea{
+    border-color: #B02313;
+    background-color:#F6E991;
+}
+
+#shy{
+    color: #B02313 !important;
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+ 
+    margin: 20px;
+}

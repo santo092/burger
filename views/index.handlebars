@@ -1,0 +1,65 @@
+<div class="title text-center">
+<h1><b>BURGER SHACK</b></h1>
+</div>
+
+<div class="container">
+    <div class="logo text-center">
+        <img src="/assets/img/burger-flat.png" height="280">
+    </div>
+
+    <div class="main-container">
+        <div class="row">
+
+            <div class="col-md">
+
+                <h3 class="text-center"><b>Burger Selection</b></h3>
+                <div id="selection">
+                    <ul>
+                        {{#each burgers}} {{#unless this.devoured}}
+
+                        <li>
+                            <p class="burgerType">{{this.burger_name}}<span>
+                                    <form action="api/burgers/{{this.id}}?_method=PUT" method="POST" class="dev">
+                                        <input type="hidden" name="devoured" value="true">
+                                        <button class="btnDevour btn-sm" type="submit">Devour it!</button>
+                                    </form>
+                        </li>
+
+                        {{/unless}} {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md">
+
+                <h3 id="add-burger" class="text-center"><b>Add Burger</b></h3>
+                <div class="form-group">
+                    <form method="POST" action="api/burgers" class="addOne text-center ">
+                        <textarea id="textArea" type="text" class="form-control" name="burger_name" rows="2"
+                            cols="40"></textarea>
+                        <button id="btnCreate" class="btn-sm" type="submit">Create!</button>
+                        <small id="shy" class="textshy form-text text-muted">Don't be shy, add a burger.</small>
+
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="col-md" id="devoured">
+
+                <h3><b>Burgers Devoured</b></h3>
+                <ul>
+                    {{#each burgers}} {{#if this.devoured}}
+                    <li>
+                        <p class="burgerType">{{this.burger_name}}</p>
+                    </li>
+                    {{/if}} {{/each}}
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>

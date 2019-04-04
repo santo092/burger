@@ -27,14 +27,14 @@ router.post("/api/burgers", (req, res) => {
 });
 
 //UPDATE
-router.post("/api/burgers/:id", function(req, res) {
+router.post("/api/burgers/:id", function (req, res) {
     var condition = "id = " + req.params.id;
-  
+
     burger.updateOne({
-      devoured: req.body.devoured
-    }, condition, function(data) {
-      res.redirect("/burgers");
+        devoured: req.body.devoured
+    }, condition, function (data) {
+        res.redirect("/burgers");
     });
-  });
+});
 
 module.exports = router;
